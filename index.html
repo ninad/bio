@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>80's Retro Bio Page</title>
+    <style>
+        body {
+            background-color: #000;
+            font-family: 'Press Start 2P', cursive;
+            color: #fff;
+            text-align: center;
+        }
+        .glow {
+            text-shadow: 0 0 20px #ff0, 0 0 30px #ff0, 0 0 40px #ff0;
+            color: #ff0;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0% {opacity: 1;}
+            50% {opacity: 0.5;}
+            100% {opacity: 1;}
+        }
+        .profile {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #ff0;
+        }
+        .social-links a {
+            color: #ff0;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="glow">John Doe</h1>
+    <img class="profile" src="profile.jpg" alt="Profile Picture" />
+    <p class="glow">80's enthusiast. Master of Pac-Man. Loves synthwave music and neon lights.</p>
+    <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-square"></i></a>
+        <a href="#"><i class="fab fa-twitter-square"></i></a>
+        <a href="#"><i class="fab fa-instagram-square"></i></a>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $('.social-links a').hover(function() {
+            $(this).addClass('glow');
+        }, function() {
+            $(this).removeClass('glow');
+        });
+    </script>
+</body>
+</html>
